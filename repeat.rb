@@ -8,10 +8,9 @@ class Repeat < Formula
   depends_on "python"
   depends_on "r"
   depends_on "samtools"
-
+ 
   def install
-    system "R"
-    system "install.packages(c('ggplot2','gridExtra'),repos='https://cran.rstudio.com')"
+    system "Rscript", "-e", ""install.packages(c('gridExtra','ggplot2') ,repos='http://cran.rstudio.com/')""
     bin.install("The_pipe.sh")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
@@ -26,7 +25,7 @@ class Repeat < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
   end
-
+ 
   test do
     system "#{bin}/The_pipe.sh"
     system "true"
