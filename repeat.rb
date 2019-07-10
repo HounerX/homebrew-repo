@@ -10,7 +10,7 @@ class Repeat < Formula
   depends_on "samtools"
  
   def install
-    system ("Rscript -e "install.packages(c('gridExtra','ggplot2') ,repos='http://cran.rstudio.com/')")
+    system ("Rscript -e install.packages(c('gridExtra','ggplot2') ,repos='http://cran.rstudio.com/')")
     bin.install("The_pipe.sh")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
