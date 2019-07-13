@@ -5,12 +5,12 @@ class Repeatprof < Formula
   version "0.9"
   sha256 "d60e535401d0cff6a745271fc1258738d07c873f5f53df53973c8b93ea4109eb"
   depends_on "bowtie2"
-  depends_on "python"
+  depends_on "python2"
   depends_on "r"
   depends_on "samtools"
  
   def install
-    system "echo", "install.packages(c('ggplot2','gridExtra','ggpubr','magrittr','scales'),repos='https://cran.rstudio.com')", "|", "R", "--no-save"
+    system "echo", '"install.packages(c('ggplot2','gridExtra','ggpubr','magrittr','scales'),repos='https://cran.rstudio.com')"', "|", "R", "--no-save"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
