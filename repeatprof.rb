@@ -10,7 +10,7 @@ class Repeatprof < Formula
   depends_on "samtools"
  
   def install
-    system({"MYVAR" => "install.packages(c('ggplot2','gridExtra','ggpubr','magrittr','scales'),repos='https://cran.rstudio.com')"}, "echo $MYVAR | R --no-save ")    bin.install("repeatprof")
+    system "echo 'install.packages(c('ggplot2','gridExtra','ggpubr','magrittr','scales'),repos='https://cran.rstudio.com')'", "|", "R", "--no-save"
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
     libexec.install("Fasta_splitter.sh")
