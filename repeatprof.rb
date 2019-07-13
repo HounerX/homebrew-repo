@@ -1,4 +1,4 @@
-class RepeatProf < Formula
+class Repeatprof < Formula
   desc 	"RepeatProfiler: A tool for generating, visualizing, and comparing repetitive DNA profiles"
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
