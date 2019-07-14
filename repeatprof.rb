@@ -3,14 +3,14 @@ class Repeatprof < Formula
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
   version "0.9"
-  sha256 "d60e535401d0cff6a745271fc1258738d07c873f5f53df53973c8b93ea4109eb"
+  sha256 "8e124b63ac9eaa71425477861b10c49ce9080a8e36f718b411ea82f868a85ef9"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
   depends_on "samtools"
  
   def install
-    system "echo 'install.packages(c('"ggplot2"','"gridExtra"','"ggpubr"','"magrittr"','"scales"'),repos='"https://cran.rstudio.com"')' | R --no-save"
+    system "Rscript","installer.R"
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
     libexec.install("Fasta_splitter.sh")
