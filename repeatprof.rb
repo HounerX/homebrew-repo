@@ -11,6 +11,7 @@ class Repeatprof < Formula
  
   def install
     system "Rscript","installer.R"
+    bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
     libexec.install("Fasta_splitter.sh")
