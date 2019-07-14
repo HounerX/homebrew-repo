@@ -11,6 +11,12 @@ class Repeatprof < Formula
   depends_on "ggpubr" => :R
   
   def install
+    mkdir_p buildpath/"lib/R"
+    ENV["R_LIBS_SITE"] = "#{buildpath}/lib/R"
+
+    system "Rscript", "-e", "install.packages(c('ggplot2','ggpubr','gridExtra'),repos='https://cran.rstudio.com')"
+
+    
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
