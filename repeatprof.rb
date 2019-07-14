@@ -26,7 +26,6 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
-    system "brew", "link", "--overwrite", "r"
     mv "R_packages", prefix
   end
     
