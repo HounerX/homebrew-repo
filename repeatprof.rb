@@ -27,7 +27,7 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
-    (bin/"repeatprof").write_env_script libexec/"repeatprof", :R_LIBS_SITE => libexec/"lib/R"
+    
 
   end
     
