@@ -11,7 +11,7 @@ class Repeatprof < Formula
   
   def install
     mkdir_p buildpath/"lib/R"
-    ENV["R_LIBS_SITE"] = "#{buildpath}/lib/R"
+    ENV["R_LIBS_SITE"] = "#{prefix}/lib/R"
     system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com')"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
