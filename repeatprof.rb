@@ -3,7 +3,7 @@ class Repeatprof < Formula
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
   version "0.9"
-  sha256 "a1789dd41b72aded29dd57edc680b07eb16215d15494e4354774b9e36cafca2a"
+  sha256 "962511ad1278ef349a2bc37c7d157e340e5be86ce0f9e422a6b1487aaf887ea3"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
@@ -11,7 +11,7 @@ class Repeatprof < Formula
   
   def install
     mkdir_p buildpath/"R_packages"
-    system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com',lib='R_packages')"
+    system "Rscript", "-e", "install.packages(c('ggplot2','reshape2','scales','ggpubr'),repos='https://cran.rstudio.com',lib='R_packages')"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
