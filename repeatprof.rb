@@ -23,7 +23,7 @@ class Repeatprof < Formula
     libexec.install("All_RP_graphs.R")
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
-	libexec.install("user_supplied_maker.R")
+    libexec.install("user_supplied_maker.R")
   end
  
   test do
