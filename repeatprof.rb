@@ -12,7 +12,7 @@ class Repeatprof < Formula
   def install
     mkdir_p buildpath/"lib/R"
     ENV["R_LIBS_SITE"] = "#{buildpath}/lib/R"
-    system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com')"
+    system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com',lib=#{prefix})"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
