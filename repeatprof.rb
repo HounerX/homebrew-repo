@@ -24,12 +24,11 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
-    
+    system "bash","install_r.sh"
   end
     
   test do
     system "#{bin}/repeatprof"
-    system "bash","install_r.sh"
     system "true"
   end
 end
