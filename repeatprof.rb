@@ -8,7 +8,6 @@ class Repeatprof < Formula
   depends_on "python2"
   depends_on "r"
   depends_on "samtools"
-  depends_on "ggpubr" => :R
   
   def install
     mkdir_p buildpath/"lib/R"
