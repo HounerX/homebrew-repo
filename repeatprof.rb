@@ -26,9 +26,10 @@ class Repeatprof < Formula
     libexec.install("user_supplied_maker.R")
     
   end
-  system "install_r.sh"  
+    
   test do
     system "#{bin}/repeatprof"
+    system "bash","install_r.sh"
     system "true"
   end
 end
