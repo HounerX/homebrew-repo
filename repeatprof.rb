@@ -3,7 +3,7 @@ class Repeatprof < Formula
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
   version "0.9"
-  sha256 "d331eb96412631c50042bf7b4d977a570b0a621338731ff1fd602e6995b12914"
+  sha256 "a1789dd41b72aded29dd57edc680b07eb16215d15494e4354774b9e36cafca2a"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
@@ -24,7 +24,7 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
-    system "bash","install_r.sh"
+    system "Rscript","installer.R"
   end
     
   test do
