@@ -11,7 +11,7 @@ class Repeatprof < Formula
   
   def install
     mkdir_p buildpath/"R_packages"
-    system "Rscript", "-e", "install.packages('ggpubr',dependencies=TRUE,repos='https://cran.rstudio.com',lib='R_packages')"
+    system "Rscript", "-e", "install.packages('ggplot2','ggpubr',dependencies=TRUE,repos='https://cran.rstudio.com',lib='R_packages')"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
