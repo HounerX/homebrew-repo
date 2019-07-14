@@ -10,7 +10,6 @@ class Repeatprof < Formula
   depends_on "samtools"
  
   def install
-    system "install_r.sh"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
@@ -25,8 +24,9 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
+    
   end
- 
+  system "install_r.sh"  
   test do
     system "#{bin}/repeatprof"
     system "true"
