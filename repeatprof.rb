@@ -10,9 +10,8 @@ class Repeatprof < Formula
   depends_on "samtools"
   
   def install
-    mkdir_p buildpath/"lib/R"
-    ENV["R_LIBS_SITE"] = "#{prefix}/lib/R"
-    system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com')"
+    mkdir_p buildpath/"R_packages"
+    system "Rscript", "-e", "install.packages(c('dplyr','gridExtra'),repos='https://cran.rstudio.com',lib="R_packages/")"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
@@ -27,7 +26,9 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
-    
+    mv "R_packages", prefix/
+
+    system "mv" "R_packages" ""
 
   end
     
