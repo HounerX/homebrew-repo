@@ -27,7 +27,6 @@ class Repeatprof < Formula
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
     mv "R_packages", prefix
-    system "Rscript", "-e", ".libPaths(c( .libPaths(), '#{prefix}/R_packages'))"
   end
     
   test do
