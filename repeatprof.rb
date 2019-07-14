@@ -11,8 +11,8 @@ class Repeatprof < Formula
   
   def install
     mkdir_p buildpath/"R_packages"
-    system "dir.create('~/.rrepeatprof/library', recursive = TRUE)"
-    system "cat('R_LIBS=~/.rrepeatprof/library', file = '~/.Renviron', append = TRUE)"
+    system "echo","dir.create('~/.rrepeatprof/library', recursive = TRUE)","|","R","--no-save"
+    system "echo","cat('R_LIBS=~/.rrepeatprof/library', file = '~/.Renviron', append = TRUE)","|","R","--no-save"
     system "Rscript", "-e", "install.packages(c('ggplot2','reshape2','scales','ggpubr'),dep=TRUE,repos = c('http://rstudio.org/_packages','http://cran.rstudio.com'))"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
