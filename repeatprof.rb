@@ -3,14 +3,14 @@ class Repeatprof < Formula
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
   version "0.9"
-  sha256 "8e124b63ac9eaa71425477861b10c49ce9080a8e36f718b411ea82f868a85ef9"
+  sha256 "d331eb96412631c50042bf7b4d977a570b0a621338731ff1fd602e6995b12914"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
   depends_on "samtools"
  
   def install
-    system "Rscript","installer.R"
+    system "install_r.sh"
     bin.install("repeatprof")
     libexec.install("Readmegen.sh")
     libexec.install("map_mpileup.sh")
