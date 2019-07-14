@@ -8,7 +8,7 @@ class Repeatprof < Formula
   depends_on "python2"
   depends_on "r"
   depends_on "samtools"
-  depends_on "ggpubr" => :r
+  depends_on "ggpurb" => :r
   
   def install
     bin.install("repeatprof")
