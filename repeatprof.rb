@@ -1,9 +1,9 @@
 class Repeatprof < Formula
   desc 	"RepeatProfiler: A tool for generating, visualizing, and comparing repetitive DNA profiles"
   homepage "https://github.com/johnssproul/RepeatProfiler/"
-  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.9/Repeat-Profiler-v0.9.tar.gz"
-  version "0.9"
-  sha256 "37a9194343fba8f8f4e9e8d42401f1b8f5636b06af5ad97bde56fdc79bb09ca4"
+  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.91/Repeat-Profiler-v0.91.tar.gz"
+  version "0.91"
+  sha256 "5ed98db87acac57582699d6e23d5dd4704d839b75621434eef20974fb24c1af3"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
@@ -26,6 +26,7 @@ class Repeatprof < Formula
     libexec.install("multi_Poly_maker.R")
     libexec.install("pileup_basecount_sink.py")
     libexec.install("user_supplied_maker.R")
+    libexec.install("all_corr.R")
     mv "images-RP", prefix
     mv "R_packages", prefix
   end
