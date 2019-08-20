@@ -3,7 +3,7 @@ class Repeatprof < Formula
   homepage "https://github.com/johnssproul/RepeatProfiler/"
   url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.92/Repeat-Profiler-v0.92.tar.gz"
   version "0.92"
-  sha256 "ffd72f76f977430db0bcf2a76ae21f5f7860bd5e1fcde9b96e8d7a7fe6cc0a8a"
+  sha256 "977efeaed195cccd9a34e3469824c1c7ac007cab5741f159041c5adcae1e5782"
   depends_on "bowtie2"
   depends_on "python2"
   depends_on "r"
