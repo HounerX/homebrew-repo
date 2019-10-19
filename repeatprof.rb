@@ -1,7 +1,7 @@
 class Repeatprof < Formula
   desc 	"RepeatProfiler: A tool for generating, visualizing, and comparing repetitive DNA profiles"
   homepage "https://github.com/johnssproul/RepeatProfiler/"
-  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.93/Repeat-Profiler-v0.93.tar.gz"
+  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.94/Repeat-Profiler-v0.94.tar.gz"
   version "0.93"
   sha256 "004248daa52eee993ef3d2bfe6bbecc65ec8faef603de5d2673aa0c3dbdcc380"
   depends_on "bowtie2"
@@ -29,6 +29,7 @@ class Repeatprof < Formula
     libexec.install("all_corr.R")
     libexec.install("singlecopy.sh")
     libexec.install("single_copy_calculator.R")
+    libexec.install("singlecopy_map_mpileup.sh")
     mv "R_packages", prefix
   end
     
