@@ -5,7 +5,7 @@ class Repeatprof < Formula
   version "0.96"
   sha256 "0c2cb21b92446d7466c7de47426ff705598c5a094d1a74779a6727362d40ed21"
   depends_on "bowtie2"
-  depends_on "python2"
+  depends_on "python"
   depends_on "r"
   depends_on "samtools"
   
