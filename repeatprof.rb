@@ -15,7 +15,7 @@ class Repeatprof < Formula
     bin.install("repeatprof")
     libexec.install("readme_gen.sh")
     libexec.install("map_reads.sh")
-    libexec.install("Fasta_splitter.sh")
+    libexec.install("fasta_splitter.sh")
     libexec.install("singlecopy.sh")
     libexec.install("all_corr.R")
     libexec.install("mk_profiles_ref.R")
