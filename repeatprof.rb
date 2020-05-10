@@ -1,9 +1,9 @@
 class Repeatprof < Formula
   desc 	"RepeatProfiler: A tool for generating, visualizing, and comparing repetitive DNA profiles"
   homepage "https://github.com/johnssproul/RepeatProfiler/"
-  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.97/Repeat-Profiler-v0.97.tar.gz"
-  version "0.97"
-  sha256 "6a9538d32bf29de0afd9eca0c992b8da40cbb0a74c1542d933cb76663d717e19"
+  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.97/Repeat-Profiler-v0.98.tar.gz"
+  version "0.98"
+  sha256 "3209cafe61fee8cc35410f03b6d2e8ffe83294b5e89e6cdb263a9ae85a2b728a"
   depends_on "bowtie2"
   depends_on "python"
   depends_on "r"
