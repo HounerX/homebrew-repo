@@ -1,13 +1,14 @@
 class Repeatprof < Formula
   desc 	"RepeatProfiler: A tool for generating, visualizing, and comparing repetitive DNA profiles"
   homepage "https://github.com/johnssproul/RepeatProfiler/"
-  url "https://github.com/johnssproul/RepeatProfiler/releases/download/0.999/Repeat-Profiler-v0.999.tar.gz"
-  version "0.999"
-  sha256 "74712c1d142308a01b4e54d3615ed5cae79ac34014cb291f77bf7639ae090ee6"
+  url "https://github.com/johnssproul/RepeatProfiler/releases/download/1.0/Repeat-Profiler-v1.0.tar.gz"
+  version "1.0"
+  sha256 "c1d508698370af71a491c26f4bc926e72d85094de21a8cdad53f171489967875"
   depends_on "bowtie2"
   depends_on "python"
   depends_on "r"
   depends_on "samtools"
+  depends_on "parallel"
   
   def install
     mkdir_p buildpath/"R_packages"
@@ -29,6 +30,9 @@ class Repeatprof < Formula
     libexec.install("encode_var.R")
     libexec.install("user_groups_maker.R")
     libexec.install("single_copy_calculator.R")
+    libexec.install("analyze_per_ref.sh")
+    libexec.install("bam_analyses.sh")
+    libexec.install("preparing_bam_to_analyze.sh")
     mv "R_packages", prefix
   end
     
